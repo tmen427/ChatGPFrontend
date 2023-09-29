@@ -1,0 +1,23 @@
+.full-width-field {
+   position: relative;
+
+  max-width: 900px;
+  width: 100%;
+
+ }
+
+
+ .mat-mdc-form-field + .mat-mdc-form-field {
+    margin-left: 5px; 
+  
+  }
+
+
+  .example-button-row {
+   text-align: center;
+  }
+
+
+  .header {
+   text-align: center;
+  }

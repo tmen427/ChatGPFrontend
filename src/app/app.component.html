@@ -1,0 +1,107 @@
+<mat-toolbar color="primary">
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span>My App</span>
+    <span class="example-spacer"></span>
+    <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+      <mat-icon>favorite</mat-icon>
+    </button>
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+      <mat-icon>share</mat-icon>
+    </button>
+  </mat-toolbar>
+
+
+
+
+
+  <mat-grid-list cols="1" rowHeight="2:1" >
+    <mat-grid-tile>
+      
+          
+        <form class="example-form" >
+                <h1 class="header">Ask ChatGpt any type of question!</h1>
+            <mat-form-field class="full-width-field">
+              <mat-label>Question</mat-label>
+              <input matInput placeholder="Ex. Who is Novak Djokovic" value="" [formControl]="search" >
+            </mat-form-field>
+            <section>
+           
+              <mat-progress-bar mode="indeterminate" *ngIf="showProgressBar"></mat-progress-bar>
+              
+              <p class="full-width-field" *ngIf="timeForSearch>0">Results found in {{timeForSearch}} second(s)</p>
+              <p class="full-width-field" *ngIf="warningmessage">The response has exceeded 10 seconds. It is likely the API has reached it's limit. The request will be cancelled. </p>
+              <p class="full-width-field">{{ChatGpResponse}}</p>
+           
+
+
+                <div class="example-button-row">
+                  <button mat-raised-button color="primary" (click)="updateSearch()">Search</button>
+                  <button mat-raised-button color="primary" (click)="clearSearch()" [ngStyle]="{'margin':'10px'}">Clear</button>
+                </div>
+              </section>
+            
+
+              <mat-accordion [ngStyle]="{'margin':'10px'}">
+                <mat-expansion-panel (opened)="panelOpenState = true"
+                                     (closed)="panelOpenState = false">
+                  <mat-expansion-panel-header>
+                    <mat-panel-title>
+                    Information About the Data
+                    </mat-panel-title>
+                    <mat-panel-description>
+              
+                    </mat-panel-description>
+                  </mat-expansion-panel-header>
+                  <p>This data model has been enhanced with the addition of NBA data from 
+                    Kaggle:
+                  </p>
+                  <p>https://www.kaggle.com/datasets/justinas/nba-players-data?resource=download</p>
+                  <p>Ask chatGPT model about this specific data and it wil respond given the newly added dataset</p>
+                  <p>The model is only as accurate as the given data! If the data is outdated the responses will be also!</p>
+                </mat-expansion-panel>
+              </mat-accordion>
+
+              <mat-accordion [ngStyle]="{'margin':'3px'}">
+                <mat-expansion-panel (opened)="panelOpenState = true"
+                                     (closed)="panelOpenState = false">
+                  <mat-expansion-panel-header>
+                    <mat-panel-title>
+                    Future Considerations
+                    </mat-panel-title>
+                    <mat-panel-description>
+              
+                    </mat-panel-description>
+                  </mat-expansion-panel-header>
+                  <p>Currently using gpt-3.5-turbo which contains training data up to September 2021</p>          
+                    <p>Since chatGPT is a language learning model it is only able to reguritate the given data sets back to user<p>
+                    <p>The more data that is feed into the model, the more it is able to reguritate relevent information.</p>
+                    <p>Coupling this language learnign module (LLM) with other machine learning algorthims can create and even more powerful tool </p>
+                </mat-expansion-panel>
+              </mat-accordion>
+
+
+          </form>
+              
+          
+  
+    </mat-grid-tile>
+
+
+
+
+
+
+  </mat-grid-list>
+
+
+ 
+  
+  <mat-toolbar color="primary">
+    <mat-toolbar-row>
+      <span>© 2023</span>
+    </mat-toolbar-row>
+    
+  </mat-toolbar>
+
