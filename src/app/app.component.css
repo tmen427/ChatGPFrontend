@@ -1,16 +1,17 @@
 .full-width-field {
-   position: relative;
-
-  max-width: 900px;
+  position: relative;
+  max-width: 80%;
   width: 100%;
+  margin-left: 10%;
 
  }
 
 
- .mat-mdc-form-field + .mat-mdc-form-field {
-    margin-left: 5px; 
+ mat-grid-tile {
+ 
+
   
-  }
+ }
 
 
   .example-button-row {
@@ -20,4 +21,10 @@
 
   .header {
    text-align: center;
+   padding: 20px;
+  }
+
+  .footer {
+   position:fixed;
+   bottom:0;
   }
