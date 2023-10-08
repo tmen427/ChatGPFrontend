@@ -6,18 +6,18 @@
 
  }
 
-
- mat-grid-tile {
- 
-
-  
+ mat-form-field  {
+   position: relative;
+   width: 100%;
  }
 
+.container {
+  height: 75%;
+}
 
   .example-button-row {
    text-align: center;
   }
-
 
   .header {
    text-align: center;

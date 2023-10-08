@@ -16,19 +16,22 @@
 
 
 <body>
+   
+   <div class="container">   
+  <mat-grid-list cols="1" rowHeight="100%"  >
 
-  <mat-grid-list cols="1" rowHeight="80%"  >
-    
     <mat-grid-tile >
   
           <form class="example-form" >
                
           <h1 class="header">Ask ChatGpt a question!</h1>
            
-          <mat-form-field [ngStyle]="{'width':'100%'}">
+          <mat-form-field appearance="outline" fxFlex="100">
               <mat-label>Question</mat-label>
               <input matInput placeholder="Ex. Who is Novak Djokovic" value="" [formControl]="search"  >
           </mat-form-field> 
+
+          
             <section>
               <mat-progress-bar mode="indeterminate" *ngIf="showProgressBar" ></mat-progress-bar>
               
@@ -43,9 +46,9 @@
               </section>
           
           </form>  
-   
-    </mat-grid-tile>
 
+    </mat-grid-tile>
+ 
 <!--
 <mat-grid-tile>
 
@@ -100,7 +103,7 @@
 
 
   </mat-grid-list>
-
+</div>
 
   <mat-toolbar class="footer" color="primary">
     <mat-toolbar-row>
