@@ -54,11 +54,11 @@ export class AppComponent {
    
        //if the searchbar has a value then do the search
     if (searchBar.length>0) {  
+
       this.showProgressBar = true; 
       
       this.Subscription = this.http.SearchBackend(searchBar).subscribe((response)=>{
         this.ChatGpResponse = response;
-        
         //when you get a response reveal how long it took
       if (this.ChatGpResponse.length > 0) {
         this.showProgressBar = false; 
@@ -66,16 +66,28 @@ export class AppComponent {
         let time = Math.floor((finalTimeClock-startTimeClock)/1000); 
         this.timeForSearch = time;  
         }
-     });
+        
+      });
 
-     //cancel the request after 10 seconds,unless cancellation is pressed
-    this.timeoutId = setTimeout(() => {
-      this.warningmessage = true;   
-      this.showProgressBar = false; 
-      //unsubscribe if the response from the api takes too long 
-        this.Subscription.unsubscribe(); 
+      // code for when the response timeouts 
+      // console.log(this.ChatGpResponse.length)
+      // if (this.ChatGpResponse.length===0) {
+    
+      //   let finalClock = Date.now(); 
+      //   let time = Math.floor((finalClock-startTimeClock)/1000); 
 
-    }, 20000);
+      //   while (time>=2) {
+      //   console.log('in the while loop')
+      //     console.log(time)
+      //   this.warningmessage = true;   
+      //   this.showProgressBar = false; 
+      //   //unsubscribe if the response from the api takes too long 
+      //     this.Subscription.unsubscribe(); 
+      //     break; 
+      //   }
+      // }
+
+
     }
     
     }
