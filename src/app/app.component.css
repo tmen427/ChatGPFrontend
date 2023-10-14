@@ -28,3 +28,25 @@
    position:fixed;
    bottom:0;
   }
+
+
+  .spacing {
+    line-height: normal;
+  }
+
+
+
+  #wrapper {
+    width: 500px;
+ 
+    overflow: hidden; /* add this to contain floated children */
+}
+#first {
+
+    float:left; /* add this */
+
+}
+#second {
+    border: 1px solid green;
+    float: left; /* add this */
+}

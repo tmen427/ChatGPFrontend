@@ -20,12 +20,20 @@ export class AppComponent {
   Subscription: any; 
   timeoutId: any; 
 
+  link: string = "https://www.whitehouse.gov/briefing-room/speeches-remarks/2023/02/07/remarks-of-president-joe-biden-state-of-the-union-address-as-prepared-for-delivery/"
+
+
   constructor(private http:HttpService){}
     ngOnInit() {
      
     }
 
     search = new FormControl('');
+    
+    clickme() {
+      this.link = "anchor tag is Clicked";
+      return this.link;
+    }
     
 
     updateSearch() {

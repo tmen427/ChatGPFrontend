@@ -6,6 +6,7 @@ import {MatInputModule} from '@angular/material/input';
 [MatFormFieldModule, MatInputModule, FormsModule, NgIf, MatButtonModule, MatIconModule]
 import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
+
 import { MatIconModule } from '@angular/material/icon';
 import { FormsModule } from '@angular/forms';
 import { NgIf } from '@angular/common';
@@ -16,6 +17,8 @@ import { HttpClientModule } from  '@angular/common/http';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
 import {MatExpansionModule} from '@angular/material/expansion';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import {MatCardModule} from '@angular/material/card';
 @NgModule({
   declarations: [
     AppComponent
@@ -35,7 +38,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     HttpClientModule, 
     MatProgressBarModule, 
     MatButtonModule, 
-    MatExpansionModule
+    MatExpansionModule, 
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
