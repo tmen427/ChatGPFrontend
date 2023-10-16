@@ -50,3 +50,7 @@
     border: 1px solid green;
     float: left; /* add this */
 }
+
+.bottom_footer {
+  color: white;
+}
