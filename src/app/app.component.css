@@ -50,16 +50,16 @@
 
 
   #wrapper {
-    width: 500px;
  
+    width: 500px; 
     overflow: hidden; /* add this to contain floated children */
 }
-
-.input {
-  padding: 10px; 
+h3 { 
+  padding: 10px 0px; 
 }
+
 #first {
-    
+     background-color: blue; 
     float:left; /* add this */
 
 }
