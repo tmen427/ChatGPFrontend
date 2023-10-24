@@ -13,7 +13,20 @@
 
 .container {
   height: 75%;
+  width: 100%;
+
+ 
 }
+
+.mat-card-title {
+  padding: 40px; 
+}
+
+.example-card {
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
 
   .example-button-row {
    text-align: center;
@@ -41,11 +54,23 @@
  
     overflow: hidden; /* add this to contain floated children */
 }
-#first {
 
+.input {
+  padding: 10px; 
+}
+#first {
+    
     float:left; /* add this */
 
 }
+.wrapper1 {
+
+  padding: 0px 20px ; 
+  width: 75%;
+  margin: 0 auto; 
+}
+
+
 #second {
     border: 1px solid green;
     float: left; /* add this */
@@ -54,3 +79,7 @@
 .bottom_footer {
   color: white;
 }
+
+
+
+

@@ -15,7 +15,7 @@
 
 
 
-<body>
+<body >
    
    <div class="container">   
   <mat-grid-list cols="1" rowHeight="100%"  >
@@ -37,7 +37,7 @@
                     <li>I used <a href="https://js.langchain.com/docs/get_started/introduction">LangChain</a> which is a 
                       Javascript framework that allows you upload your
                       own personal documents to be used with ChatGPT</li>
-                    <li>Typically .txt and .csv file formats is used with the model. The bigger the data the longer the processing time</li>
+            
                   </ul>
              
                 </mat-card-content>
@@ -52,12 +52,12 @@
           <h1 class="header">Ask ChatGPT A Question!</h1>
           
         
-
+        <div class="wrapper1">
           <mat-form-field appearance="outline" class="first" >
               <mat-label>Question or Statement</mat-label>
-              <input matInput placeholder="Ex. Give me a summary of the article" value="" [formControl]="search"  >
+              <input class='input' matInput placeholder="Ex. Give me a summary of the article" value="" [formControl]="search"   >
           </mat-form-field> 
-
+        </div>
           
             <section>
               <mat-progress-bar mode="indeterminate" *ngIf="showProgressBar" ></mat-progress-bar>
