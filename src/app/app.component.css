@@ -27,9 +27,13 @@
   padding-right: 40px;
 }
 
+.title {
+  padding: 20px; 
+}
 
   .example-button-row {
    text-align: center;
+   padding-bottom: 30px; 
   }
 
   .header {
@@ -59,7 +63,7 @@ h3 {
 }
 
 #first {
-     background-color: blue; 
+   
     float:left; /* add this */
 
 }

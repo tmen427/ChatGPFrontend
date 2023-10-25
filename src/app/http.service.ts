@@ -7,7 +7,7 @@ import { HttpClient } from  '@angular/common/http';
 export class HttpService {
 
   private url = 'http://localhost:3000/api/'; 
-
+ // private final = 'https://chatgptapp.tonymdesigns.com/backend/';
   constructor(private http: HttpClient) { }
 
   SearchBackend(query:string) {
